@@ -1,88 +1,196 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="tr">
-  <head>
-    <!-- UTF-8 önerilir (metin/karakter bozulmalarını önler) -->
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>YMH354 - CSS ile Tasarım Örneği</title>
 
-    <!-- External CSS (en önerilen yöntem) -->
-    <link rel="stylesheet" href="style.css" />
-  </head>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio | Ad Soyad</title>
+    <!-- Google Fonts: Inter -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
 
-  <body>
-    <a class="skip-link" href="#content">İçeriğe atla</a>
+<body>
 
-    <header class="site-header">
-      <div class="container header-inner">
-        <h1 class="brand">YMH354</h1>
-        <p class="tagline">Designing with CSS: Layout, Selectors, Box Model</p>
-      </div>
+    <!-- Header / Navbar -->
+    <header class="header">
+        <!-- Layer 1: Top Bar -->
+        <div class="top-bar">
+            <div class="container">
+                <div class="status">AVAILABLE FOR FREELANCE WORK.</div>
+                <div class="social-links">
+                    <a href="#">LinkedIn</a>
+                    <a href="#">GitHub</a>
+                    <a href="#">Instagram</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Layer 2: Logo Bar -->
+        <div class="logo-bar">
+            <div class="container">
+                <h1>AD SOYAD</h1>
+            </div>
+        </div>
+
+        <!-- Layer 3: Nav Bar -->
+        <nav class="nav-bar">
+            <div class="container">
+                <ul>
+                    <li><a href="#about">HAKKIMDA</a></li>
+                    <li><a href="#education">EĞİTİM</a></li>
+                    <li><a href="#skills">YETENEKLER</a></li>
+                    <li><a href="#projects">PROJELER</a></li>
+                    <li><a href="#contact">İLETİŞİM</a></li>
+                </ul>
+            </div>
+        </nav>
     </header>
 
-    <nav class="site-nav" aria-label="Ana menü">
-      <div class="container">
-        <ul class="nav-list">
-          <li><a href="#selectors">Selectors</a></li>
-          <li><a href="#layout">Layout</a></li>
-          <li><a href="#boxmodel">Box Model</a></li>
-          <li><a href="#responsive">Responsive</a></li>
-        </ul>
-      </div>
-    </nav>
+    <main>
+        <!-- Hero Section -->
+        <section class="hero" id="hero">
+            <div class="container">
+                <div class="profile-img">
+                    <!-- Placeholder for Profile Image -->
+                    <div
+                        style="width: 100%; height: 100%; background: #ccc; display: flex; align-items: center; justify-content: center; font-size: 4rem; color: #fff;">
+                        👤</div>
+                </div>
+                <h2>AD SOYAD</h2>
+                <div class="role">Frontend Developer</div>
+                <p class="description">
+                    Modern web teknolojileriyle kullanıcı odaklı, performanslı ve şık arayüzler geliştiren bir tutkuyla
+                    kod yazan geliştiriciyim.
+                </p>
+                <a href="#" class="btn">CV İndir</a>
+            </div>
+        </section>
 
-    <main class="container layout" id="content">
-      <article class="card" id="selectors">
-        <h2>1) Selectors + Pseudo-class</h2>
-        <p>
-          Bu paragraf normal akışta. <span class="badge">.class</span> ve
-          <span id="special">#id</span> örneği içeriyor.
-        </p>
+        <!-- About Section -->
+        <section id="about">
+            <div class="container">
+                <h2 class="section-title">Hakkımda</h2>
+                <div class="about-content">
+                    <p>
+                        Merhaba! Ben Ad Soyad. Frontend geliştirme dünyasına olan merakım, karmaşık sorunlara basit ve
+                        zarif çözümler üretme isteğimle başladı. Sürekli öğrenmeyi ve kendimi geliştirmeyi ilke edindim.
+                    </p>
+                    <p style="margin-top: 20px;">
+                        İlgi alanlarım arasında modern UI/UX prensipleri, animasyonlar ve web performansı yer alıyor.
+                        Hedefim, kullanıcıların hayatını kolaylaştıran dijital deneyimler tasarlamak.
+                    </p>
+                </div>
+            </div>
+        </section>
 
-        <p class="note">
-          Linkin üzerine gel: <a href="#selectors">hover örneği</a>
-        </p>
+        <!-- Education Section -->
+        <section id="education" style="background-color: #fcfcfc;">
+            <div class="container">
+                <h2 class="section-title">Eğitim</h2>
+                <div class="education-grid">
+                    <div class="edu-card">
+                        <h3>Bilgisayar Mühendisliği</h3>
+                        <div class="school">Örnek Üniversitesi</div>
+                        <div class="year">2020 - Devam Ediyor (4. Sınıf)</div>
+                    </div>
+                    <div class="edu-card">
+                        <h3>Fen Lisesi</h3>
+                        <div class="school">Örnek Anadolu Lisesi</div>
+                        <div class="year">2016 - 2020</div>
+                    </div>
+                </div>
+            </div>
+        </section>
 
-        <button class="btn" type="button">Buton</button>
-      </article>
+        <!-- Skills Section -->
+        <section id="skills">
+            <div class="container">
+                <h2 class="section-title">Yetenekler</h2>
+                <div class="skills-container">
+                    <span class="skill-badge">HTML5</span>
+                    <span class="skill-badge">CSS3</span>
+                    <span class="skill-badge">JavaScript</span>
+                    <span class="skill-badge">VS Code</span>
+                    <span class="skill-badge">Git</span>
+                    <span class="skill-badge">GitHub</span>
+                    <span class="skill-badge">İngilizce (B2)</span>
+                    <span class="skill-badge">Responsive Design</span>
+                </div>
+            </div>
+        </section>
 
-      <aside class="sidebar card" id="layout">
-        <h2>2) Sidebar</h2>
-        <p>
-          Bu alan tipik web sayfası düzenini (header/nav/content/sidebar/footer)
-          göstermeye yarar.
-        </p>
-
-        <div class="callout">
-          <strong>İpucu:</strong> box-sizing: border-box kullanmak hesaplamaları kolaylaştırır.
-        </div>
-      </aside>
-
-      <section class="card" id="boxmodel">
-        <h2>3) Box Model Demo</h2>
-        <div class="box-demo">
-          <div class="box">
-            <p>
-              Bu kutu; <em>content</em>, <em>padding</em>, <em>border</em>, <em>margin</em>
-              bileşenlerini görselleştirir.
-            </p>
-          </div>
-        </div>
-      </section>
-
-      <section class="card" id="responsive">
-        <h2>4) Responsive (Media Query)</h2>
-        <p>
-          Ekran daraldığında yerleşim tek sütuna düşecek ve menü daha kompakt görünecek.
-          Tarayıcı genişliğini değiştirip gözlemleyin.
-        </p>
-      </section>
+        <!-- Projects Section -->
+        <section id="projects" style="background-color: #fcfcfc;">
+            <div class="container">
+                <h2 class="section-title">Projeler</h2>
+                <div class="projects-grid">
+                    <!-- Project 1 -->
+                    <div class="project-card">
+                        <div class="project-img"
+                            style="background: #333; display: flex; align-items: center; justify-content: center; color: white; font-size: 2rem;">
+                            🚀</div>
+                        <div class="project-info">
+                            <h3>E-Ticaret Arayüzü</h3>
+                            <p class="project-tech">HTML, CSS, JS</p>
+                            <p style="margin-bottom: 20px;">Modern bir alışveriş deneyimi sunan, tamamen responsive
+                                e-ticaret sitesi arayüz tasarımı.</p>
+                            <a href="#" class="project-link">Projeyi Gör</a>
+                        </div>
+                    </div>
+                    <!-- Project 2 -->
+                    <div class="project-card">
+                        <div class="project-img"
+                            style="background: #555; display: flex; align-items: center; justify-content: center; color: white; font-size: 2rem;">
+                            📱</div>
+                        <div class="project-info">
+                            <h3>Hava Durumu Uygulaması</h3>
+                            <p class="project-tech">JavaScript, OpenWeather API</p>
+                            <p style="margin-bottom: 20px;">Anlık hava durumu verilerini çeken ve kullanıcıya temiz bir
+                                arayüzle sunan uygulama.</p>
+                            <a href="#" class="project-link">Projeyi Gör</a>
+                        </div>
+                    </div>
+                    <!-- Project 3 -->
+                    <div class="project-card">
+                        <div class="project-img"
+                            style="background: #777; display: flex; align-items: center; justify-content: center; color: white; font-size: 2rem;">
+                            🎨</div>
+                        <div class="project-info">
+                            <h3>Kişisel Blog Teması</h3>
+                            <p class="project-tech">HTML, CSS (Grid & Flexbox)</p>
+                            <p style="margin-bottom: 20px;">Minimalist, okuma odaklı ve hızlı yüklenen kişisel blog yazı
+                                arayüzü.</p>
+                            <a href="#" class="project-link">Projeyi Gör</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
     </main>
 
-    <footer class="site-footer">
-      <div class="container">
-        <small>© YMH354 Web Design and Programming</small>
-      </div>
+    <!-- Contact / Footer -->
+    <footer id="contact">
+        <div class="container">
+            <h2 class="section-title" style="color: white;">İletişim</h2>
+            <p>Benimle iletişime geçmekten çekinmeyin!</p>
+            <p style="margin-top: 10px; font-weight: 700; font-size: 1.2rem;">eposta@adresiniz.com</p>
+
+            <div class="contact-links">
+                <a href="#">GitHub</a>
+                <a href="#">LinkedIn</a>
+                <a href="#">Twitter</a>
+            </div>
+
+            <p style="margin-top: 50px; font-size: 0.8rem; opacity: 0.5;">
+                &copy; 2026 Ad Soyad. Tüm hakları saklıdır.
+            </p>
+        </div>
     </footer>
-  </body>
+
+</body>
+
 </html>
