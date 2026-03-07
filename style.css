@@ -353,3 +353,101 @@ li {
         padding: 30px;
     }
 }
+
+/* --- Project Button --- */
+.project-btn {
+    display: inline-block;
+    margin-top: 16px;
+    padding: 9px 20px;
+    background: transparent;
+    color: var(--purple);
+    border: 1px solid rgba(139, 92, 246, 0.4);
+    border-radius: 4px;
+    font-size: 0.8rem;
+    font-weight: 700;
+    font-family: 'Inter', sans-serif;
+    letter-spacing: 1px;
+    cursor: pointer;
+    transition: var(--transition);
+}
+
+.project-btn:hover {
+    background: rgba(139, 92, 246, 0.15);
+    border-color: var(--purple);
+    color: #c4b5fd;
+}
+
+/* --- Modal --- */
+.modal-overlay {
+    display: none;
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.75);
+    z-index: 1000;
+    align-items: center;
+    justify-content: center;
+    backdrop-filter: blur(4px);
+}
+
+.modal-overlay.active {
+    display: flex;
+    animation: fadeIn 0.25s ease forwards;
+}
+
+.modal-box {
+    background: #111111;
+    border: 1px solid #2a2a2a;
+    border-radius: 10px;
+    padding: 48px;
+    max-width: 600px;
+    width: 90%;
+    position: relative;
+    animation: slideUp 0.25s ease forwards;
+}
+
+@keyframes slideUp {
+    from { opacity: 0; transform: translateY(20px); }
+    to   { opacity: 1; transform: translateY(0); }
+}
+
+.modal-close {
+    position: absolute;
+    top: 16px;
+    right: 20px;
+    background: transparent;
+    border: none;
+    color: #555;
+    font-size: 1.2rem;
+    cursor: pointer;
+    font-family: 'Inter', sans-serif;
+    transition: var(--transition);
+}
+
+.modal-close:hover {
+    color: #e0e0e0;
+}
+
+.modal-title {
+    font-size: 1.8rem;
+    font-weight: 800;
+    color: #f0eef8;
+    margin-bottom: 12px;
+    border-bottom: 2px solid var(--purple);
+    padding-bottom: 12px;
+    display: inline-block;
+}
+
+.modal-tech {
+    font-size: 0.78rem;
+    font-weight: 700;
+    color: var(--purple);
+    letter-spacing: 1.5px;
+    margin: 16px 0 24px;
+    text-transform: uppercase;
+}
+
+.modal-desc {
+    font-size: 1rem;
+    color: #a090c0;
+    line-height: 1.8;
+}
