@@ -46,8 +46,7 @@ li {
 
 /* İsim alanı: koyu mor glow, sola hizalı */
 .header-title {
-    background: linear-gradient(135deg, #0d0d0d 0%, #1a0533 50%, #0d0d0d 100%);
-    box-shadow: 0 4px 32px rgba(139, 92, 246, 0.4), inset 0 0 80px rgba(139, 92, 246, 0.12);
+    background: #0a0a0a;
     padding: 38px 60px 32px;
     position: relative;
     text-align: left;
@@ -131,11 +130,11 @@ li {
 .main-container {
     max-width: var(--container-width);
     margin: 40px auto;
-    background: linear-gradient(135deg, #0d0d0d 0%, #1a0533 50%, #0d0d0d 100%);
+    background: #0a0a0a;
     min-height: 60vh;
     border-radius: 10px;
-    box-shadow: 0 8px 40px rgba(139, 92, 246, 0.4), inset 0 0 100px rgba(139, 92, 246, 0.1);
-    border: 1px solid rgba(139, 92, 246, 0.25);
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.5);
+    border: 1px solid #1c1c1c;
     padding: 60px;
     position: relative;
 }
