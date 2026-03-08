@@ -99,6 +99,15 @@ li {
     color: #555;
     transition: color 0.3s;
     white-space: nowrap;
+    width: 44px;
+}
+
+.lang-label:first-child {
+    text-align: right;
+}
+
+.lang-label:last-child {
+    text-align: left;
 }
 
 /* Aktif taraftaki etiket parlasın */
