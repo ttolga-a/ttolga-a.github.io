@@ -2,13 +2,13 @@
 :root {
     --bg-header: #000000;
     --bg-panel: #ffffff;
-    --bg-body: #f4f4f4;
+    --bg-body: #0a0a0a;
     --text-white: #ffffff;
-    --text-dark: #333333;
-    --text-muted: #666666;
-    --accent: #ffffff;
+    --text-dark: #111111;
+    --text-muted: #555555;
+    --accent: #ef4444;
     --purple: #ef4444;
-    --purple-light: rgba(239, 68, 68, 0.12);
+    --purple-light: rgba(239, 68, 68, 0.1);
     --transition: all 0.3s ease;
     --container-width: 1000px;
 }
@@ -44,9 +44,9 @@ li {
     width: 100%;
 }
 
-/* İsim alanı: koyu mor glow, sola hizalı */
+/* İsim alanı: beyaz, siyah yazı */
 .header-title {
-    background: #0a0a0a;
+    background: #ffffff;
     padding: 38px 60px 32px;
     position: relative;
     text-align: left;
@@ -68,7 +68,7 @@ li {
     font-weight: 900;
     text-transform: uppercase;
     letter-spacing: 5px;
-    color: #f0eef8;
+    color: #111111;
 }
 
 /* Nav çubuğu: siyah, kırmızı detay */
@@ -133,9 +133,9 @@ li {
     background: #0a0a0a;
     min-height: 60vh;
     border-radius: 10px;
-    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.5);
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.6);
     border: 1px solid #1c1c1c;
-    padding: 60px;
+    padding: 24px;
     position: relative;
 }
 
@@ -146,6 +146,9 @@ li {
 
 .panel.active {
     display: block;
+    background: #ffffff;
+    border-radius: 8px;
+    padding: 48px;
     animation: fadeIn 0.6s ease forwards;
 }
 
@@ -167,7 +170,7 @@ li {
     max-width: 700px;
     margin: 0 auto 40px;
     font-size: 1.1rem;
-    color: #b8b0d0;
+    color: #555555;
 }
 
 .cv-btn {
@@ -200,7 +203,7 @@ li {
     border-bottom: 4px solid var(--purple);
     display: inline-block;
     padding-bottom: 10px;
-    color: #f0eef8;
+    color: #111111;
 }
 
 /* --- Education --- */
@@ -228,17 +231,17 @@ li {
 .edu-item h3 {
     font-size: 1.3rem;
     margin-bottom: 5px;
-    color: #e8e0f8;
+    color: #111111;
 }
 
 .edu-item .school {
     font-weight: 700;
-    color: #a090c0;
+    color: #444444;
 }
 
 .edu-item .date {
     font-style: italic;
-    color: #7a6a9a;
+    color: #888888;
 }
 
 /* --- Skills --- */
@@ -249,20 +252,20 @@ li {
 }
 
 .skill-tag {
-    background-color: rgba(239, 68, 68, 0.1);
+    background-color: rgba(239, 68, 68, 0.07);
     padding: 12px 25px;
     border-radius: 4px;
     font-weight: 700;
     font-size: 0.9rem;
-    color: #d0c8f0;
-    border: 1px solid rgba(239, 68, 68, 0.35);
+    color: #222222;
+    border: 1px solid rgba(239, 68, 68, 0.3);
     transition: var(--transition);
 }
 
 .skill-tag:hover {
-    background-color: rgba(239, 68, 68, 0.22);
+    background-color: rgba(239, 68, 68, 0.15);
     border-color: var(--purple);
-    color: #ffffff;
+    color: #111111;
 }
 
 /* --- Projects --- */
@@ -273,8 +276,8 @@ li {
 }
 
 .project-card {
-    border: 1px solid rgba(239, 68, 68, 0.2);
-    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid rgba(239, 68, 68, 0.18);
+    background: #ffffff;
     padding: 30px;
     border-radius: 8px;
     transition: var(--transition);
@@ -282,18 +285,18 @@ li {
 
 .project-card:hover {
     border-color: var(--purple);
-    background: rgba(239, 68, 68, 0.07);
-    box-shadow: 0 5px 20px rgba(239, 68, 68, 0.2);
+    background: #ffffff;
+    box-shadow: 0 5px 20px rgba(239, 68, 68, 0.12);
 }
 
 .project-card h3 {
     margin-bottom: 10px;
-    color: #e8e0f8;
+    color: #111111;
 }
 
 .project-card p {
     font-size: 0.9rem;
-    color: #9888b8;
+    color: #555555;
     margin-bottom: 15px;
 }
 
@@ -306,7 +309,7 @@ li {
 /* --- Contact --- */
 .contact-area {
     text-align: center;
-    color: #e8e0f8;
+    color: #111111;
 }
 
 .btn-group {
