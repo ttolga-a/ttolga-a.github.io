@@ -35,11 +35,10 @@
             </div>
         </div>
         <nav class="nav-menu">
-            <div class="nav-link active" data-target="about" data-i18n="navAbout">HAKKIMDA</div>
-            <div class="nav-link" data-target="education" data-i18n="navEducation">EĞİTİM</div>
-            <div class="nav-link" data-target="skills" data-i18n="navSkills">YETENEKLER</div>
             <div class="nav-link" data-target="games" data-i18n="navGames">OYUNLAR</div>
             <div class="nav-link" data-target="software" data-i18n="navProjects">PROJELER</div>
+            <div class="nav-link active nav-about-link" data-target="about" data-i18n="navAbout">HAKKIMDA</div>
+            <div class="nav-link" data-target="skills" data-i18n="navSkills">YETENEKLER</div>
             <div class="nav-link" data-target="contact" data-i18n="navContact">İLETİŞİM</div>
             <a href="TolgaAcar_CV.pdf" download class="nav-cv-btn" data-i18n="cvBtn">CV İndir</a>
         </nav>
@@ -47,34 +46,32 @@
 
     <main class="main-container">
 
-        <!-- Hakkımda -->
+        <!-- Hakkımda ve Eğitim -->
         <section class="panel active" id="about">
             <div class="hero">
                 <div class="profile-img-area">👤</div>
                 <h2 class="panel-title" data-i18n="aboutTitle">Hakkımda</h2>
-                <p class="intro-text" data-i18n="aboutText">Merhaba, ben Tolga Acar. Ankara Üniversitesi Yazılım
+                <p class="intro-text" data-i18n="aboutText" style="margin-bottom: 30px;">Merhaba, ben Tolga Acar. Ankara
+                    Üniversitesi Yazılım
                     Mühendisliği 3. sınıf öğrencisi ve tutkulu bir oyun geliştiricisiyim. Unity motoruyla oyunlar
                     tasarlıyor; projelerimde özellikle akıcı oynanış mekaniklerine ve aldığım geri dönütlere göre
                     sistemi iyileştirmeye büyük önem veriyorum. Oyun dünyasındaki çalışmalarımın yanı sıra, Spring Boot
                     ve React gibi modern teknolojilerle full-stack web projeleri üreterek yelpazemi genişletiyorum. Şu
                     sıralar, Game Jam'lerde kazandığım hızlı problem çözme yeteneğimi profesyonel bir ekiple
                     harmanlayabileceğim yaz stajı fırsatlarına odaklanmış durumdayım.</p>
-            </div>
-        </section>
 
-        <!-- Eğitim -->
-        <section class="panel" id="education">
-            <h2 class="panel-title" data-i18n="educationTitle">Eğitim</h2>
-            <div class="edu-list">
-                <div class="edu-item">
-                    <h3 data-i18n="edu1Title">Yazılım Mühendisliği</h3>
-                    <div class="school">Ankara Üniversitesi</div>
-                    <div class="date" data-i18n="edu1Date">2023 - Devam Ediyor (3. Sınıf)</div>
-                </div>
-                <div class="edu-item">
-                    <h3 data-i18n="edu2Title">Fen Lisesi</h3>
-                    <div class="school">Şehit Ahmet Özsoy Fen Lisesi</div>
-                    <div class="date">2019 - 2023</div>
+                <h2 class="panel-title" data-i18n="educationTitle" style="margin-top: 50px;">Eğitim</h2>
+                <div class="edu-list">
+                    <div class="edu-item">
+                        <h3 data-i18n="edu1Title">Yazılım Mühendisliği</h3>
+                        <div class="school">Ankara Üniversitesi</div>
+                        <div class="date" data-i18n="edu1Date">2023 - Devam Ediyor (3. Sınıf)</div>
+                    </div>
+                    <div class="edu-item">
+                        <h3 data-i18n="edu2Title">Fen Lisesi</h3>
+                        <div class="school">Şehit Ahmet Özsoy Fen Lisesi</div>
+                        <div class="date">2019 - 2023</div>
+                    </div>
                 </div>
             </div>
         </section>
