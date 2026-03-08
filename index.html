@@ -201,13 +201,44 @@
             <div class="project-detail-back">
                 <button class="back-btn" id="backToProjects" data-i18n="backBtn">← Geri</button>
             </div>
-            <div class="project-detail-content">
-                <div class="project-detail-header">
-                    <h2 class="panel-title" id="detailTitle"></h2>
-                    <div class="project-detail-tech" id="detailTech"></div>
-                    <div class="project-detail-date" id="detailDate"></div>
+
+            <!-- Alt Sekmeler -->
+            <div class="detail-tabs">
+                <div class="detail-tab active" data-tab="details" data-i18n="detailsTab">Proje Detayları</div>
+                <div class="detail-tab" data-tab="gallery" data-i18n="galleryTab">Proje Galerisi</div>
+            </div>
+
+            <!-- Detaylar Sekmesi -->
+            <div class="detail-pane active" id="pane-details">
+                <div class="project-detail-body">
+                    <div class="project-detail-left">
+                        <div class="project-detail-header">
+                            <h2 class="panel-title" id="detailTitle"></h2>
+                            <div class="project-detail-tech" id="detailTech"></div>
+                            <div class="project-detail-date" id="detailDate"></div>
+                        </div>
+                        <p class="project-detail-desc" id="detailDesc"></p>
+                        <div class="project-links">
+                            <a href="#" class="proj-link-btn github-btn" id="detailGithub" target="_blank">
+                                <span>⌥</span> GitHub
+                            </a>
+                            <a href="#" class="proj-link-btn itchio-btn" id="detailItchio" target="_blank">
+                                <span>🎮</span> itch.io
+                            </a>
+                        </div>
+                    </div>
+                    <div class="project-detail-right">
+                        <div class="project-img-placeholder" id="detailImg">📷</div>
+                    </div>
                 </div>
-                <p class="project-detail-desc" id="detailDesc"></p>
+            </div>
+
+            <!-- Galeri Sekmesi -->
+            <div class="detail-pane" id="pane-gallery">
+                <div class="gallery-empty">
+                    <div class="gallery-empty-icon">🖼️</div>
+                    <p data-i18n="galleryEmpty">Galeri yakında eklenecek.</p>
+                </div>
             </div>
         </section>
 
@@ -241,6 +272,9 @@
                 skillsTitle: 'Yetenekler', gamesTitle: 'Oyunlar', projectsTitle: 'Projeler',
                 contactTitle: 'İletişim', contactText: 'Benimle her zaman iletişime geçebilirsiniz.',
                 backBtn: '← Geri',
+                detailsTab: 'Proje Detayları',
+                galleryTab: 'Proje Galerisi',
+                galleryEmpty: 'Galeri yakında eklenecek.',
             },
             en: {
                 navAbout: 'ABOUT', navEducation: 'EDUCATION', navSkills: 'SKILLS',
@@ -254,6 +288,9 @@
                 skillsTitle: 'Skills', gamesTitle: 'Games', projectsTitle: 'Projects',
                 contactTitle: 'Contact', contactText: 'You can always get in touch with me.',
                 backBtn: '← Back',
+                detailsTab: 'Project Details',
+                galleryTab: 'Project Gallery',
+                galleryEmpty: 'Gallery coming soon.',
             }
         };
 
@@ -308,6 +345,15 @@
                 detailTech.textContent = card.dataset.tech;
                 detailDate.textContent = currentLang === 'tr' ? card.dataset.dateTr : card.dataset.dateEn;
                 detailDesc.textContent = currentLang === 'tr' ? card.dataset.descTr : card.dataset.descEn;
+
+                // GitHub ve itch.io bağlantıları (şimdilik '#' yap, daha sonra datasetten gelecek)
+                document.getElementById('detailGithub').href = "#";
+                document.getElementById('detailItchio').href = "#";
+
+                // Her proje açıldığında "Detaylar" sekmesine dön
+                const detailsTab = document.querySelector('.detail-tab[data-tab="details"]');
+                if (detailsTab) detailsTab.click();
+
                 switchPanel('project-detail');
             });
         });
@@ -315,6 +361,20 @@
         document.getElementById('backToProjects').addEventListener('click', () => {
             currentCard = null;
             switchPanel(previousPanel);
+        });
+
+        // ── Detail Tabs ───────────────────────────────────────────────
+        const detailTabs = document.querySelectorAll('.detail-tab');
+        const detailPanes = document.querySelectorAll('.detail-pane');
+
+        detailTabs.forEach(tab => {
+            tab.addEventListener('click', () => {
+                detailTabs.forEach(t => t.classList.remove('active'));
+                detailPanes.forEach(p => p.classList.remove('active'));
+
+                tab.classList.add('active');
+                document.getElementById('pane-' + tab.dataset.tab).classList.add('active');
+            });
         });
 
         // ── Language Toggle ───────────────────────────────────────────
