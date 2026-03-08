@@ -26,18 +26,20 @@
                     <span class="lang-label">English</span>
                 </div>
                 <div class="lang-toggle theme-toggle" id="themeToggle">
-                    <span class="lang-label">Siyah</span>
+                    <span class="lang-label" data-i18n="themeDark">Siyah</span>
                     <div class="lang-track">
                         <div class="lang-knob theme-knob"></div>
                     </div>
-                    <span class="lang-label">Beyaz</span>
+                    <span class="lang-label" data-i18n="themeLight">Beyaz</span>
                 </div>
             </div>
         </div>
         <nav class="nav-menu">
             <div class="nav-link" data-target="games" data-i18n="navGames">OYUNLAR</div>
             <div class="nav-link" data-target="software" data-i18n="navProjects">PROJELER</div>
+            <div class="nav-link" data-target="events" data-i18n="navEvents">ETKİNLİKLER</div>
             <div class="nav-link active nav-about-link" data-target="about" data-i18n="navAbout">HAKKIMDA</div>
+            <div class="nav-link" data-target="education" data-i18n="navEducation">EĞİTİM</div>
             <div class="nav-link" data-target="skills" data-i18n="navSkills">YETENEKLER</div>
             <div class="nav-link" data-target="contact" data-i18n="navContact">İLETİŞİM</div>
             <a href="TolgaAcar_CV.pdf" download class="nav-cv-btn" data-i18n="cvBtn">CV İndir</a>
@@ -46,12 +48,21 @@
 
     <main class="main-container">
 
-        <!-- Hakkımda ve Eğitim -->
+        <!-- Etkinlikler -->
+        <section class="panel" id="events">
+            <h2 class="panel-title" data-i18n="eventsTitle">Etkinlikler</h2>
+            <div class="gallery-empty" style="margin-top: 30px;">
+                <div class="gallery-empty-icon">📅</div>
+                <p data-i18n="eventsEmpty">Etkinlikler sayfası yakında güncellenecektir.</p>
+            </div>
+        </section>
+
+        <!-- Hakkımda -->
         <section class="panel active" id="about">
             <div class="hero">
                 <div class="profile-img-area">👤</div>
                 <h2 class="panel-title" data-i18n="aboutTitle">Hakkımda</h2>
-                <p class="intro-text" data-i18n="aboutText" style="margin-bottom: 30px;">Merhaba, ben Tolga Acar. Ankara
+                <p class="intro-text" data-i18n="aboutText">Merhaba, ben Tolga Acar. Ankara
                     Üniversitesi Yazılım
                     Mühendisliği 3. sınıf öğrencisi ve tutkulu bir oyun geliştiricisiyim. Unity motoruyla oyunlar
                     tasarlıyor; projelerimde özellikle akıcı oynanış mekaniklerine ve aldığım geri dönütlere göre
@@ -59,19 +70,22 @@
                     ve React gibi modern teknolojilerle full-stack web projeleri üreterek yelpazemi genişletiyorum. Şu
                     sıralar, Game Jam'lerde kazandığım hızlı problem çözme yeteneğimi profesyonel bir ekiple
                     harmanlayabileceğim yaz stajı fırsatlarına odaklanmış durumdayım.</p>
+            </div>
+        </section>
 
-                <h2 class="panel-title" data-i18n="educationTitle" style="margin-top: 50px;">Eğitim</h2>
-                <div class="edu-list">
-                    <div class="edu-item">
-                        <h3 data-i18n="edu1Title">Yazılım Mühendisliği</h3>
-                        <div class="school">Ankara Üniversitesi</div>
-                        <div class="date" data-i18n="edu1Date">2023 - Devam Ediyor (3. Sınıf)</div>
-                    </div>
-                    <div class="edu-item">
-                        <h3 data-i18n="edu2Title">Fen Lisesi</h3>
-                        <div class="school">Şehit Ahmet Özsoy Fen Lisesi</div>
-                        <div class="date">2019 - 2023</div>
-                    </div>
+        <!-- Eğitim -->
+        <section class="panel" id="education">
+            <h2 class="panel-title" data-i18n="educationTitle">Eğitim</h2>
+            <div class="edu-list">
+                <div class="edu-item">
+                    <h3 data-i18n="edu1Title">Yazılım Mühendisliği</h3>
+                    <div class="school">Ankara Üniversitesi</div>
+                    <div class="date" data-i18n="edu1Date">2023 - Devam Ediyor (3. Sınıf)</div>
+                </div>
+                <div class="edu-item">
+                    <h3 data-i18n="edu2Title">Fen Lisesi</h3>
+                    <div class="school">Şehit Ahmet Özsoy Fen Lisesi</div>
+                    <div class="date">2019 - 2023</div>
                 </div>
             </div>
         </section>
@@ -259,35 +273,41 @@
         const i18n = {
             tr: {
                 navAbout: 'HAKKIMDA', navEducation: 'EĞİTİM', navSkills: 'YETENEKLER',
-                navGames: 'OYUNLAR', navProjects: 'PROJELER', navContact: 'İLETİŞİM',
+                navGames: 'OYUNLAR', navProjects: 'PROJELER', navContact: 'İLETİŞİM', navEvents: 'ETKİNLİKLER',
                 cvBtn: 'CV İndir',
                 aboutTitle: 'Hakkımda',
                 aboutText: "Merhaba, ben Tolga Acar. Ankara Üniversitesi Yazılım Mühendisliği 3. sınıf öğrencisi ve tutkulu bir oyun geliştiricisiyim. Unity motoruyla oyunlar tasarlıyor; projelerimde özellikle akıcı oynanış mekaniklerine ve aldığım geri dönütlere göre sistemi iyileştirmeye büyük önem veriyorum. Oyun dünyasındaki çalışmalarımın yanı sıra, Spring Boot ve React gibi modern teknolojilerle full-stack web projeleri üreterek yelpazemi genişletiyorum. Şu sıralar, Game Jam'lerde kazandığım hızlı problem çözme yeteneğimi profesyonel bir ekiple harmanlayabileceğim yaz stajı fırsatlarına odaklanmış durumdayım.",
                 educationTitle: 'Eğitim',
                 edu1Title: 'Yazılım Mühendisliği', edu1Date: '2023 - Devam Ediyor (3. Sınıf)',
                 edu2Title: 'Fen Lisesi',
-                skillsTitle: 'Yetenekler', gamesTitle: 'Oyunlar', projectsTitle: 'Projeler',
+                skillsTitle: 'Yetenekler', gamesTitle: 'Oyunlar', projectsTitle: 'Projeler', eventsTitle: 'Etkinlikler',
                 contactTitle: 'İletişim', contactText: 'Benimle her zaman iletişime geçebilirsiniz.',
                 backBtn: '← Geri',
                 detailsTab: 'Proje Detayları',
                 galleryTab: 'Proje Galerisi',
                 galleryEmpty: 'Galeri yakında eklenecek.',
+                eventsEmpty: 'Etkinlikler sayfası yakında güncellenecektir.',
+                themeDark: 'Siyah',
+                themeLight: 'Beyaz'
             },
             en: {
                 navAbout: 'ABOUT', navEducation: 'EDUCATION', navSkills: 'SKILLS',
-                navGames: 'GAMES', navProjects: 'PROJECTS', navContact: 'CONTACT',
+                navGames: 'GAMES', navProjects: 'PROJECTS', navContact: 'CONTACT', navEvents: 'EVENTS',
                 cvBtn: 'Download CV',
                 aboutTitle: 'About Me',
                 aboutText: "Hello, I'm Tolga Acar. I'm a 3rd-year Software Engineering student at Ankara University and a passionate game developer. I design games with the Unity engine, placing great importance on fluid gameplay mechanics and continuously improving systems based on feedback. Alongside my work in gaming, I broaden my skill set by building full-stack web projects with modern technologies like Spring Boot and React. I'm currently focused on finding a summer internship where I can combine the rapid problem-solving skills I've gained through Game Jams with a professional team.",
                 educationTitle: 'Education',
                 edu1Title: 'Software Engineering', edu1Date: '2023 - Ongoing (3rd Year)',
                 edu2Title: 'Science High School',
-                skillsTitle: 'Skills', gamesTitle: 'Games', projectsTitle: 'Projects',
+                skillsTitle: 'Skills', gamesTitle: 'Games', projectsTitle: 'Projects', eventsTitle: 'Events',
                 contactTitle: 'Contact', contactText: 'You can always get in touch with me.',
                 backBtn: '← Back',
                 detailsTab: 'Project Details',
                 galleryTab: 'Project Gallery',
                 galleryEmpty: 'Gallery coming soon.',
+                eventsEmpty: 'Events page will be updated soon.',
+                themeDark: 'Black',
+                themeLight: 'White'
             }
         };
 
