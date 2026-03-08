@@ -25,7 +25,13 @@
                     </div>
                     <span class="lang-label">English</span>
                 </div>
-                <a href="TolgaAcar_CV.pdf" download class="cv-btn-header" data-i18n="cvBtn">CV İndir</a>
+                <div class="lang-toggle theme-toggle" id="themeToggle">
+                    <span class="lang-label">Siyah</span>
+                    <div class="lang-track">
+                        <div class="lang-knob theme-knob"></div>
+                    </div>
+                    <span class="lang-label">Beyaz</span>
+                </div>
             </div>
         </div>
         <nav class="nav-menu">
@@ -35,6 +41,7 @@
             <div class="nav-link" data-target="games" data-i18n="navGames">OYUNLAR</div>
             <div class="nav-link" data-target="software" data-i18n="navProjects">PROJELER</div>
             <div class="nav-link" data-target="contact" data-i18n="navContact">İLETİŞİM</div>
+            <a href="TolgaAcar_CV.pdf" download class="nav-cv-btn" data-i18n="cvBtn">CV İndir</a>
         </nav>
     </header>
 
@@ -316,6 +323,15 @@
             currentLang = currentLang === 'tr' ? 'en' : 'tr';
             langToggle.classList.toggle('lang-en', currentLang === 'en');
             applyLang(currentLang);
+        });
+
+        // ── Theme Toggle ──────────────────────────────────────────────
+        const themeToggle = document.getElementById('themeToggle');
+        let currentTheme = 'dark';
+        themeToggle.addEventListener('click', () => {
+            currentTheme = currentTheme === 'dark' ? 'light' : 'dark';
+            themeToggle.classList.toggle('is-light', currentTheme === 'light');
+            document.body.classList.toggle('theme-light', currentTheme === 'light');
         });
     </script>
 
