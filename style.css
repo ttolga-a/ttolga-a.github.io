@@ -51,6 +51,7 @@ li {
 .header-title {
     background: #0a0a0a;
     padding: 22px 36px 14px;
+    padding-right: 180px;
     position: relative;
     text-align: left;
 }
@@ -158,10 +159,10 @@ li {
 }
 
 .header h1 {
-    font-size: 2.1rem;
+    font-size: clamp(1rem, 3.5vw, 2.1rem);
     font-weight: 900;
     text-transform: uppercase;
-    letter-spacing: 3px;
+    letter-spacing: clamp(1px, 0.5vw, 3px);
     color: #f0eef8;
 }
 
@@ -562,4 +563,53 @@ li {
     line-height: 1.9;
     border-left: 3px solid rgba(239, 68, 68, 0.4);
     padding-left: 24px;
+}
+
+/* --- Responsive --- */
+@media (max-width: 600px) {
+    .header-title {
+        padding: 16px 20px 12px;
+        padding-right: 20px;
+        display: flex;
+        flex-wrap: wrap;
+        align-items: flex-start;
+        gap: 10px;
+    }
+
+    .header-actions {
+        position: static;
+        transform: none;
+        flex-direction: row;
+        align-items: center;
+        gap: 10px;
+        flex-wrap: wrap;
+    }
+
+    .nav-menu {
+        gap: 12px;
+        padding: 8px 12px;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .main-container {
+        margin: 16px 12px;
+        padding: 16px;
+    }
+}
+
+@media (max-width: 400px) {
+    .header-actions {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 6px;
+    }
+
+    .nav-menu {
+        gap: 8px;
+    }
+
+    .nav-link {
+        font-size: 0.72rem;
+    }
 }
