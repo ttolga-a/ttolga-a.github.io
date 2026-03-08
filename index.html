@@ -24,7 +24,8 @@
             <div class="nav-link active" data-target="about">HAKKIMDA</div>
             <div class="nav-link" data-target="education">EĞİTİM</div>
             <div class="nav-link" data-target="skills">YETENEKLER</div>
-            <div class="nav-link" data-target="projects">PROJELER</div>
+            <div class="nav-link" data-target="games">OYUNLAR</div>
+            <div class="nav-link" data-target="software">YAZILIM</div>
             <div class="nav-link" data-target="contact">İLETİŞİM</div>
         </nav>
     </header>
@@ -36,7 +37,7 @@
                 <div class="profile-img-area">👤</div>
                 <h2 class="panel-title">Hakkımda</h2>
                 <p class="intro-text">
-                    Merhaba, ben Tolga Acar. Ankara Üniversitesi Yazılım Mühendisliği 2. sınıf öğrencisi ve tutkulu bir
+                    Merhaba, ben Tolga Acar. Ankara Üniversitesi Yazılım Mühendisliği 3. sınıf öğrencisi ve tutkulu bir
                     oyun geliştiricisiyim. Unity motoruyla oyunlar tasarlıyor; projelerimde özellikle akıcı oynanış
                     mekaniklerine ve aldığım geri dönütlere göre sistemi iyileştirmeye büyük önem veriyorum. Oyun
                     dünyasındaki çalışmalarımın yanı sıra, Spring Boot ve React gibi modern teknolojilerle full-stack
@@ -85,16 +86,10 @@
             </div>
         </section>
 
-        <!-- Projeler Panel -->
-        <section class="panel" id="projects">
-            <h2 class="panel-title">Projeler</h2>
+        <!-- Oyunlar Panel -->
+        <section class="panel" id="games">
+            <h2 class="panel-title">Oyunlar</h2>
             <div class="projects-grid">
-                <div class="project-card" data-title="Kurs Platformu" data-tech="SPRING BOOT, REACT"
-                    data-desc="Spring Boot ve React kullanarak uçtan uca geliştirdiğim web tabanlı bir eğitim ve kurs platformu. Bu projeyle full-stack geliştirme dinamiklerini ve modern web teknolojilerini pekiştirme fırsatı buldum.">
-                    <h3>Kurs Platformu</h3>
-                    <div class="tech">SPRING BOOT, REACT</div>
-                    <div class="project-arrow">→</div>
-                </div>
                 <div class="project-card" data-title="Experiment W" data-tech="UNITY ENGINE, C#, BLENDER"
                     data-desc="HUJAM '25 game jam etkinliğinde zaman baskısı altında geliştirdiğim, korku ve aksiyon temalarını harmanlayan birinci şahıs nişancı oyunu. Etkileyici bir atmosfer kurma ve aksiyon mekanikleri tasarlama üzerine odaklandığım heyecan verici bir deneyimdi.">
                     <h3>Experiment W</h3>
@@ -134,10 +129,23 @@
             </div>
         </section>
 
+        <!-- Yazılım Panel -->
+        <section class="panel" id="software">
+            <h2 class="panel-title">Yazılım</h2>
+            <div class="projects-grid">
+                <div class="project-card" data-title="Kurs Platformu" data-tech="SPRING BOOT, REACT"
+                    data-desc="Spring Boot ve React kullanarak uçtan uca geliştirdiğim web tabanlı bir eğitim ve kurs platformu. Bu projeyle full-stack geliştirme dinamiklerini ve modern web teknolojilerini pekiştirme fırsatı buldum.">
+                    <h3>Kurs Platformu</h3>
+                    <div class="tech">SPRING BOOT, REACT</div>
+                    <div class="project-arrow">→</div>
+                </div>
+            </div>
+        </section>
+
         <!-- Proje Detay Panel -->
         <section class="panel" id="project-detail">
             <div class="project-detail-back">
-                <button class="back-btn" id="backToProjects">← Projelerim</button>
+                <button class="back-btn" id="backToProjects">← Geri</button>
             </div>
             <div class="project-detail-content">
                 <div class="project-detail-header">
@@ -193,9 +201,14 @@
         const detailTitle = document.getElementById('detailTitle');
         const detailTech = document.getElementById('detailTech');
         const detailDesc = document.getElementById('detailDesc');
+        let previousPanel = 'games';
 
         document.querySelectorAll('.project-card').forEach(card => {
             card.addEventListener('click', () => {
+                // hangi panelden gelindi kaydediyoruz
+                const activePanel = document.querySelector('.panel.active');
+                if (activePanel) previousPanel = activePanel.id;
+
                 detailTitle.textContent = card.dataset.title;
                 detailTech.textContent = card.dataset.tech;
                 detailDesc.textContent = card.dataset.desc;
@@ -203,9 +216,9 @@
             });
         });
 
-        // Back button
+        // Back button → önceki panele dön
         document.getElementById('backToProjects').addEventListener('click', () => {
-            switchPanel('projects');
+            switchPanel(previousPanel);
         });
     </script>
 </body>

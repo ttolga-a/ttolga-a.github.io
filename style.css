@@ -426,6 +426,9 @@ li {
 
 .project-detail-header {
     margin-bottom: 32px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
 }
 
 .project-detail-tech {
