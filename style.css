@@ -42,32 +42,126 @@ li {
     color: var(--text-white);
     padding: 0;
     width: 100%;
+    position: sticky;
+    top: 0;
+    z-index: 100;
 }
 
 /* İsim alanı: siyah, beyaz yazı */
 .header-title {
     background: #0a0a0a;
-    padding: 38px 60px 32px;
+    padding: 22px 36px 14px;
     position: relative;
     text-align: left;
 }
 
 .header-title::after {
+    display: none;
+}
+
+.header h1::after {
     content: '';
     display: block;
-    width: 48px;
+    width: 30px;
     height: 3px;
     background: var(--purple);
     border-radius: 2px;
-    margin: 14px 0 0;
+    margin: 8px 0 0;
     opacity: 0.8;
 }
 
+/* Header sağ taraf: dil toggle + CV butonu */
+.header-actions {
+    position: absolute;
+    right: 36px;
+    top: 50%;
+    transform: translateY(-50%);
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 8px;
+}
+
+/* Dil Toggle */
+.lang-toggle {
+    display: flex;
+    align-items: center;
+    gap: 7px;
+    cursor: pointer;
+    user-select: none;
+}
+
+.lang-label {
+    font-size: 0.65rem;
+    font-weight: 700;
+    letter-spacing: 0.4px;
+    color: #555;
+    transition: color 0.3s;
+    white-space: nowrap;
+}
+
+/* Aktif taraftaki etiket parlasın */
+.lang-toggle:not(.lang-en) .lang-label:first-child,
+.lang-toggle.lang-en .lang-label:last-child {
+    color: #ffffff;
+}
+
+.lang-track {
+    width: 34px;
+    height: 18px;
+    background: #1a0000;
+    border: 1px solid rgba(200, 0, 0, 0.6);
+    border-radius: 4px;
+    position: relative;
+    box-shadow: 0 0 10px rgba(180, 0, 0, 0.5), inset 0 0 6px rgba(0, 0, 0, 0.6);
+    flex-shrink: 0;
+}
+
+.lang-knob {
+    position: absolute;
+    top: 2px;
+    left: 2px;
+    width: 12px;
+    height: 12px;
+    background: #cc0000;
+    border-radius: 2px;
+    transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    box-shadow: 0 0 8px rgba(220, 0, 0, 0.8), 0 0 16px rgba(200, 0, 0, 0.4);
+}
+
+.lang-toggle.lang-en .lang-knob {
+    transform: translateX(16px);
+}
+
+/* CV Butonu (Header) */
+.cv-btn-header {
+    display: inline-block;
+    padding: 7px 16px;
+    background: linear-gradient(135deg, #1a0000 0%, #0d0d0d 100%);
+    color: var(--text-white);
+    font-weight: 700;
+    font-size: 0.72rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    border-radius: 5px;
+    border: 1px solid rgba(239, 68, 68, 0.4);
+    box-shadow: 0 0 14px rgba(239, 68, 68, 0.2), inset 0 0 16px rgba(239, 68, 68, 0.04);
+    transition: var(--transition);
+    white-space: nowrap;
+}
+
+.cv-btn-header:hover {
+    background: linear-gradient(135deg, #3d0a0a 0%, #1a0000 100%);
+    border-color: var(--purple);
+    box-shadow: 0 0 24px rgba(239, 68, 68, 0.4), inset 0 0 24px rgba(239, 68, 68, 0.08);
+    transform: translateY(-2px);
+}
+
 .header h1 {
-    font-size: 3.5rem;
+    font-size: 2.1rem;
     font-weight: 900;
     text-transform: uppercase;
-    letter-spacing: 5px;
+    letter-spacing: 3px;
     color: #f0eef8;
 }
 
@@ -75,8 +169,8 @@ li {
 .nav-menu {
     display: flex;
     justify-content: center;
-    gap: 30px;
-    padding: 16px 0;
+    gap: 18px;
+    padding: 10px 0;
     margin-top: 0;
     background: #1a1a1a;
     box-shadow: 0 4px 20px rgba(239, 68, 68, 0.2), inset 0 0 40px rgba(239, 68, 68, 0.04);
@@ -95,11 +189,11 @@ li {
 }
 
 .nav-link {
-    font-size: 0.9rem;
+    font-size: 0.8rem;
     font-weight: 600;
     text-transform: uppercase;
     letter-spacing: 2px;
-    padding: 5px 0;
+    padding: 3px 0;
     position: relative;
     cursor: pointer;
     color: #aaaaaa;
