@@ -300,6 +300,7 @@ li {
     background: #0a0a0a;
     border-radius: 8px;
     padding: 48px;
+    box-shadow: 0 0 15px rgba(255, 255, 255, 0.04);
     animation: fadeIn 0.6s ease forwards;
 }
 
@@ -909,6 +910,7 @@ body.theme-light .main-container {
 
 body.theme-light .panel.active {
     background: #ffffff;
+    box-shadow: 0 0 20px rgba(204, 0, 0, 0.15);
 }
 
 body.theme-light .panel-title {
@@ -994,4 +996,80 @@ body.theme-light .lang-toggle.lang-en .lang-label:last-child {
 body.theme-light .theme-toggle:not(.is-light) .lang-label:first-child,
 body.theme-light .theme-toggle.is-light .lang-label:last-child {
     color: #111111;
+}
+
+/* --- Background Codes --- */
+.bg-codes-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    pointer-events: none;
+    z-index: -10;
+    overflow: hidden;
+}
+
+.bg-code {
+    position: absolute;
+    color: rgba(204, 0, 0, 0.15);
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: bold;
+    font-size: 1rem;
+    line-height: 1.2;
+    letter-spacing: 2px;
+    user-select: none;
+    white-space: nowrap;
+}
+
+/* Tek Satır ve Altı Çizgili (Sol Üst & Sağ Alt) */
+.bg-code.code-1,
+.bg-code.code-4 {
+    border-bottom: 2px solid rgba(204, 0, 0, 0.1);
+    padding-bottom: 4px;
+}
+
+/* Tek Sütun ve Yanı Çizgili (Sağ Üst & Sol Alt) */
+.bg-code.code-2,
+.bg-code.code-3 {
+    border-left: 2px solid rgba(204, 0, 0, 0.1);
+    padding-left: 6px;
+    text-align: center;
+}
+
+/* Konumlandırmalar */
+.bg-code.code-1 {
+    top: 5vh;
+    left: 3vw;
+    text-align: left;
+}
+
+.bg-code.code-2 {
+    top: 15vh;
+    right: 3vw;
+}
+
+.bg-code.code-3 {
+    bottom: 15vh;
+    left: 3vw;
+}
+
+.bg-code.code-4 {
+    bottom: 5vh;
+    right: 3vw;
+    text-align: right;
+}
+
+body.theme-light .bg-code {
+    color: rgba(204, 0, 0, 0.08);
+}
+
+body.theme-light .bg-code.code-1,
+body.theme-light .bg-code.code-4 {
+    border-bottom-color: rgba(204, 0, 0, 0.05);
+}
+
+body.theme-light .bg-code.code-2,
+body.theme-light .bg-code.code-3 {
+    border-left-color: rgba(204, 0, 0, 0.05);
 }
