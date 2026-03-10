@@ -61,7 +61,6 @@
             <div class="nav-link" data-target="education" data-i18n="navEducation">EĞİTİM</div>
             <div class="nav-link" data-target="skills" data-i18n="navSkills">YETENEKLER</div>
             <div class="nav-link" data-target="contact" data-i18n="navContact">İLETİŞİM</div>
-            <a href="TolgaAcar_CV.pdf" download class="nav-cv-btn" data-i18n="cvBtn">CV İndir</a>
         </nav>
     </header>
 
@@ -351,6 +350,7 @@
         let currentCard = null;
 
         function applyLang(lang) {
+            document.documentElement.lang = lang;
             document.querySelectorAll('[data-i18n]').forEach(el => {
                 const key = el.getAttribute('data-i18n');
                 if (i18n[lang][key] !== undefined) el.textContent = i18n[lang][key];
