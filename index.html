@@ -212,7 +212,8 @@
                     data-desc-tr="HUJAM '25 game jam etkinliğinde zaman baskısı altında geliştirdiğim, korku ve aksiyon temalarını harmanlayan birinci şahıs nişancı oyunu. Etkileyici bir atmosfer kurma ve aksiyon mekanikleri tasarlama üzerine odaklandığım heyecan verici bir deneyimdi."
                     data-desc-en="A first-person shooter blending horror and action themes, developed under time pressure at the HUJAM '25 game jam. An exciting experience focused on building an immersive atmosphere and designing action mechanics."
                     data-rich-content-id="experimentW-rich-content"
-                    data-itchio="https://zerefcoo.itch.io/experiment-w">
+                    data-itchio="https://zerefcoo.itch.io/experiment-w"
+                    data-img="Images/Experiment W/ExperimentW  Cover.png">
                     <h3>Experiment W</h3>
                     <div class="tech">UNITY ENGINE, C#, BLENDER</div>
                     <div class="project-date">Aralık 2025</div>
@@ -541,7 +542,14 @@
                     itchioBtn.style.display = 'none';
                 }
 
-                // Her proje açıldığında "Detaylar" sekmesine dön
+                // Ana görseli güncelle
+                const detailImg = document.getElementById('detailImg');
+                if (card.dataset.img) {
+                    detailImg.innerHTML = `<img src="${card.dataset.img}" alt="${card.dataset.title}" style="width:100%;height:100%;object-fit:cover;border-radius:10px;">`;
+                } else {
+                    detailImg.innerHTML = '📷';
+                    detailImg.style.fontSize = '3rem';
+                }
                 const detailsTab = document.querySelector('.detail-tab[data-tab="details"]');
                 if (detailsTab) detailsTab.click();
 
