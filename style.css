@@ -1074,6 +1074,195 @@ body.theme-light .bg-code.code-3 {
     border-left-color: rgba(204, 0, 0, 0.05);
 }
 
+/* --- Rich Content (Experiment W vb.) --- */
+.rich-detail-desc {
+    border-left: 3px solid rgba(204, 0, 0, 0.4);
+    padding-left: 24px;
+    margin-bottom: 30px;
+}
+
+.rich-section-title {
+    font-size: 1.05rem;
+    font-weight: 800;
+    color: #ffffff;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-top: 24px;
+    margin-bottom: 10px;
+}
+
+.rich-section-title:first-child {
+    margin-top: 0;
+}
+
+.rich-paragraph {
+    font-size: 1rem;
+    color: #a090c0;
+    line-height: 1.85;
+    margin-bottom: 16px;
+}
+
+.rich-entry {
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
+    margin-bottom: 16px;
+    padding: 12px 16px;
+    background: rgba(204, 0, 0, 0.05);
+    border-left: 2px solid rgba(204, 0, 0, 0.35);
+    border-radius: 0 4px 4px 0;
+}
+
+.rich-entry-title {
+    font-size: 0.88rem;
+    font-weight: 700;
+    color: #cc0000;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.rich-entry-text {
+    font-size: 0.97rem;
+    color: #a090c0;
+    line-height: 1.75;
+}
+
+/* Light theme overrides for rich content */
+body.theme-light .rich-section-title {
+    color: #111111;
+}
+
+body.theme-light .rich-paragraph {
+    color: #444444;
+}
+
+body.theme-light .rich-entry {
+    background: rgba(204, 0, 0, 0.04);
+}
+
+body.theme-light .rich-entry-text {
+    color: #444444;
+}
+
+/* --- Events Timeline --- */
+.events-timeline {
+    display: flex;
+    flex-direction: column;
+    padding-left: 20px;
+    border-left: 2px solid rgba(204, 0, 0, 0.35);
+    margin-top: 10px;
+}
+
+.event-item {
+    position: relative;
+    padding: 0 0 36px 32px;
+}
+
+.event-item:last-child {
+    padding-bottom: 0;
+}
+
+.event-dot {
+    position: absolute;
+    left: -9px;
+    top: 6px;
+    width: 14px;
+    height: 14px;
+    background: #cc0000;
+    border-radius: 50%;
+    box-shadow: 0 0 10px rgba(204, 0, 0, 0.6);
+}
+
+.event-content {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.event-header {
+    display: flex;
+    align-items: baseline;
+    gap: 14px;
+    flex-wrap: wrap;
+}
+
+/* Proje kartı h3 ile aynı renk */
+.event-name {
+    font-size: 1.05rem;
+    font-weight: 700;
+    color: #e8e0f8;
+}
+
+/* Proje kartı .tech ile aynı renk */
+.event-date {
+    font-size: 0.78rem;
+    font-weight: 700;
+    color: #cc0000;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+/* Proje açıklama rengiyle uyumlu */
+.event-role {
+    font-size: 0.82rem;
+    font-weight: 600;
+    color: #a090c0;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.event-game-row {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+/* Proje kartı butonlarıyla aynı stil */
+.event-game-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 7px;
+    padding: 8px 18px;
+    background: rgba(204, 0, 0, 0.08);
+    border: 1px solid rgba(204, 0, 0, 0.25);
+    border-radius: 5px;
+    color: #e8e0f8;
+    font-family: 'Inter', sans-serif;
+    font-size: 0.85rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    letter-spacing: 0.3px;
+}
+
+.event-game-btn:hover {
+    background: rgba(204, 0, 0, 0.18);
+    border-color: #cc0000;
+    color: #ffffff;
+    transform: translateX(4px);
+    box-shadow: 0 2px 12px rgba(204, 0, 0, 0.2);
+}
+
+/* Light theme */
+body.theme-light .event-name {
+    color: #111111;
+}
+
+body.theme-light .event-role {
+    color: #555555;
+}
+
+body.theme-light .event-game-btn {
+    color: #222222;
+    background: rgba(204, 0, 0, 0.05);
+    border-color: rgba(204, 0, 0, 0.2);
+}
+
+body.theme-light .event-game-btn:hover {
+    color: #cc0000;
+    background: rgba(204, 0, 0, 0.1);
+}
+
 /* --- Secret Red Dot --- */
 .secret-red-dot {
     position: absolute;

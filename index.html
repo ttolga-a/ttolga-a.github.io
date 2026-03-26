@@ -69,9 +69,52 @@
         <!-- Etkinlikler -->
         <section class="panel" id="events">
             <h2 class="panel-title" data-i18n="eventsTitle">Etkinlikler</h2>
-            <div class="gallery-empty" style="margin-top: 30px;">
-                <div class="gallery-empty-icon">📅</div>
-                <p data-i18n="eventsEmpty">Etkinlikler sayfası yakında güncellenecektir.</p>
+            <div class="events-timeline">
+
+                <!-- 31 Ekim - 2 Kasım 2025 -->
+                <div class="event-item">
+                    <div class="event-dot"></div>
+                    <div class="event-content">
+                        <div class="event-header">
+                            <span class="event-name">HUJAM'25</span>
+                            <span class="event-date">31 Ekim – 2 Kasım 2025</span>
+                        </div>
+                        <div class="event-game-row">
+                            <button class="event-game-btn" onclick="openProjectByTitle('Experiment W')">
+                                <span>🎮</span> Experiment W
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 17-19 Ekim 2025 -->
+                <div class="event-item">
+                    <div class="event-dot"></div>
+                    <div class="event-content">
+                        <div class="event-header">
+                            <span class="event-name">Jamination 8</span>
+                            <span class="event-date">17–19 Ekim 2025</span>
+                        </div>
+                        <div class="event-game-row">
+                            <button class="event-game-btn" onclick="openProjectByTitle('Bombo Clat')">
+                                <span>🎮</span> Bombo Clat
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 22 Mart 2025 -->
+                <div class="event-item">
+                    <div class="event-dot"></div>
+                    <div class="event-content">
+                        <div class="event-header">
+                            <span class="event-name">Ankara Üniversitesi Siber Güvenlik Zirvesi</span>
+                            <span class="event-date">22 Mart 2025</span>
+                        </div>
+                        <div class="event-role">Ekip Lideri</div>
+                    </div>
+                </div>
+
             </div>
         </section>
 
@@ -144,7 +187,6 @@
             <h2 class="panel-title" data-i18n="gamesTitle">Oyunlar</h2>
             <div class="projects-grid">
 
-                <!-- Geçici olarak gizlendi
                 <div class="project-card" data-title="Ankurunner" data-tech="UNITY ENGINE, C#, LiDAR"
                     data-date-tr="Devam Ediyor" data-date-en="Ongoing"
                     data-desc-tr="Üniversitedeki hocalarımla birlikte yürüttüğüm, gerçek dünya verilerini LiDAR modelleme ile Unity motoruna aktararak geliştirdiğimiz runner oyunu. İleri seviye tarama teknolojilerini oyun mekaniklerine buluşturan akademik ve teknik bir çalışmaydı."
@@ -154,12 +196,23 @@
                     <div class="project-date">Devam Ediyor</div>
                     <div class="project-arrow">→</div>
                 </div>
-                -->
+
+                <div class="project-card" data-title="ThirdPersonCombatGame" data-tech="UNITY ENGINE, C#"
+                    data-date-tr="Devam Ediyor" data-date-en="Ongoing"
+                    data-desc-tr="Üçüncü şahıs perspektifinden oynanan, dövüş mekaniğine odaklanan bir aksiyon oyunu. Karakter animasyonları, saldırı sistemleri ve düşman yapay zekası üzerine çalışmalar sürmektedir."
+                    data-desc-en="An action game played from a third-person perspective, focused on combat mechanics. Work is ongoing on character animations, attack systems, and enemy AI.">
+                    <h3>ThirdPersonCombatGame</h3>
+                    <div class="tech">UNITY ENGINE, C#</div>
+                    <div class="project-date">Devam Ediyor</div>
+                    <div class="project-arrow">→</div>
+                </div>
 
                 <div class="project-card" data-title="Experiment W" data-tech="UNITY ENGINE, C#, BLENDER"
                     data-date-tr="Aralık 2025" data-date-en="December 2025"
                     data-desc-tr="HUJAM '25 game jam etkinliğinde zaman baskısı altında geliştirdiğim, korku ve aksiyon temalarını harmanlayan birinci şahıs nişancı oyunu. Etkileyici bir atmosfer kurma ve aksiyon mekanikleri tasarlama üzerine odaklandığım heyecan verici bir deneyimdi."
-                    data-desc-en="A first-person shooter blending horror and action themes, developed under time pressure at the HUJAM '25 game jam. An exciting experience focused on building an immersive atmosphere and designing action mechanics.">
+                    data-desc-en="A first-person shooter blending horror and action themes, developed under time pressure at the HUJAM '25 game jam. An exciting experience focused on building an immersive atmosphere and designing action mechanics."
+                    data-rich-content-id="experimentW-rich-content"
+                    data-itchio="https://zerefcoo.itch.io/experiment-w">
                     <h3>Experiment W</h3>
                     <div class="tech">UNITY ENGINE, C#, BLENDER</div>
                     <div class="project-date">Aralık 2025</div>
@@ -169,7 +222,8 @@
                 <div class="project-card" data-title="Bombo Clat" data-tech="UNITY ENGINE, C#" data-date-tr="Kasım 2025"
                     data-date-en="November 2025"
                     data-desc-tr="48 saatlik bir Game Jam'de 'Unstable' (Dengesiz) temasına uygun olarak geliştirdiğimiz 2D platform oyunu. Game Developer olarak yer aldığım bu projede; zamanlayıcısı rastgele değişen dinamik bomba mekaniğini, ipucu sistemini ve kullanıcı arayüzünü kodlayarak hızlı prototipleme becerilerimi sergiledim."
-                    data-desc-en="A 2D platform game developed in 48 hours at a Game Jam under the 'Unstable' theme. As a Game Developer, I coded the dynamic bomb mechanic with randomly changing timers, the hint system, and the UI — showcasing my rapid prototyping skills.">
+                    data-desc-en="A 2D platform game developed in 48 hours at a Game Jam under the 'Unstable' theme. As a Game Developer, I coded the dynamic bomb mechanic with randomly changing timers, the hint system, and the UI — showcasing my rapid prototyping skills."
+                    data-itchio="https://scorlax.itch.io/bomboclat">
                     <h3>Bombo Clat</h3>
                     <div class="tech">UNITY ENGINE, C#</div>
                     <div class="project-date">Kasım 2025</div>
@@ -179,7 +233,8 @@
                 <div class="project-card" data-title="Cartoon Cards" data-tech="UNITY ENGINE, C#"
                     data-date-tr="Mayıs 2025" data-date-en="May 2025"
                     data-desc-tr="Queue, LinkedList ve Stack gibi veri yapılarını aktif olarak kullanarak geliştirdiğim, çizgi film karakterleri temalı 3D stratejik kart oyunu. Algoritmik düşünme becerilerimi oyun mekaniklerine yansıttığım bu çalışma, görsel efektleri ve özel yetenek sistemleriyle klasik kart oyunlarına dinamik bir yaklaşım sunuyor."
-                    data-desc-en="A 3D strategic card game with cartoon characters, built using data structures like Queue, LinkedList, and Stack. This project reflects my algorithmic thinking in game mechanics and delivers a dynamic take on classic card games with visual effects and a custom ability system.">
+                    data-desc-en="A 3D strategic card game with cartoon characters, built using data structures like Queue, LinkedList, and Stack. This project reflects my algorithmic thinking in game mechanics and delivers a dynamic take on classic card games with visual effects and a custom ability system."
+                    data-github="https://github.com/zzynpkrdgg/cardGame">
                     <h3>Cartoon Cards</h3>
                     <div class="tech">UNITY ENGINE, C#</div>
                     <div class="project-date">Mayıs 2025</div>
@@ -189,18 +244,20 @@
                 <div class="project-card" data-title="UlgenHan" data-tech="UNITY ENGINE, C#" data-date-tr="Nisan 2025"
                     data-date-en="April 2025"
                     data-desc-tr="Türk mitolojisini temel alan ve yapımına yeni başladığımız 2D macera projemiz. Özgün düşman tasarımlarına sahip 4 farklı harita ve oyuncunun ilerledikçe güçlendiği bir karakter geliştirme/dövüş sistemi üzerine kurgulanıyor."
-                    data-desc-en="Our 2D adventure project based on Turkish mythology, currently in early development. It features 4 maps with unique enemy designs and a character progression/combat system that strengthens as the player advances.">
+                    data-desc-en="Our 2D adventure project based on Turkish mythology, currently in early development. It features 4 maps with unique enemy designs and a character progression/combat system that strengthens as the player advances."
+                    data-github="https://github.com/ttolga-a/Project-Myth">
                     <h3>UlgenHan</h3>
                     <div class="tech">UNITY ENGINE, C#</div>
                     <div class="project-date">Nisan 2025</div>
                     <div class="project-arrow">→</div>
                 </div>
 
-                <div class="project-card" data-title="2D Pixel Platformer Oyunu" data-tech="UNITY ENGINE, C#"
+                <div class="project-card" data-title="2D Pixel Platformer Oyunu" data-title-tr="2D Pixel Platformer Oyunu" data-title-en="2D Pixel Platformer Game" data-tech="UNITY ENGINE, C#"
                     data-date-tr="Mart 2025" data-date-en="March 2025"
                     data-desc-tr="Temel platform dinamiklerini çift zıplama ve duvara tutunma gibi gelişmiş mekaniklerle zenginleştirdiğim 2D platformer oyunu. Bir eğitim kursunu temel alarak başladığım bu projeyi, özgün düşmanlar, tuzaklar ve dinamik zorluk sistemleriyle kendi vizyonuma göre baştan tasarladım."
-                    data-desc-en="A 2D platformer enriched with advanced mechanics like double jumping and wall-climbing. Starting from an educational course, I redesigned the entire project with my own vision — adding original enemies, traps, and a dynamic difficulty system.">
-                    <h3>2D Pixel Platformer Oyunu</h3>
+                    data-desc-en="A 2D platformer enriched with advanced mechanics like double jumping and wall-climbing. Starting from an educational course, I redesigned the entire project with my own vision — adding original enemies, traps, and a dynamic difficulty system."
+                    data-github="https://github.com/ttolga-a/2D-Platformer-Game">
+                    <h3 class="card-title">2D Pixel Platformer Oyunu</h3>
                     <div class="tech">UNITY ENGINE, C#</div>
                     <div class="project-date">Mart 2025</div>
                     <div class="project-arrow">→</div>
@@ -214,22 +271,33 @@
             <h2 class="panel-title" data-i18n="projectsTitle">Projeler</h2>
             <div class="projects-grid">
 
-                <div class="project-card" data-title="Kurs Platformu" data-tech="SPRING BOOT, REACT"
+                <div class="project-card" data-title="Giyim Asistanı" data-title-tr="Giyim Asistanı" data-title-en="Fashion Assistant" data-tech="PYTHON, AI/ML"
+                    data-date-tr="Devam Ediyor" data-date-en="Ongoing"
+                    data-desc-tr="Yapay zeka destekli bir giyim ve kombin asistanı. Kullanıcıların dolabındaki kıyafetleri analiz ederek günlük, spor veya özel etkinliklere uygun kombin önerileri sunan akıllı bir sistem geliştirme sürecindeyim."
+                    data-desc-en="An AI-powered clothing and outfit assistant. I am developing a smart system that analyzes items in a user's wardrobe and suggests outfit combinations suitable for casual, sport, or special occasions.">
+                    <h3 class="card-title">Giyim Asistanı</h3>
+                    <div class="tech">PYTHON, AI/ML</div>
+                    <div class="project-date">Devam Ediyor</div>
+                    <div class="project-arrow">→</div>
+                </div>
+
+                <div class="project-card" data-title="Aerondight Kurs Platformu" data-title-tr="Aerondight Kurs Platformu" data-title-en="Aerondight Course Platform" data-tech="SPRING BOOT, REACT"
                     data-date-tr="Ocak 2026" data-date-en="January 2026"
                     data-desc-tr="Spring Boot ve React kullanarak uçtan uca geliştirdiğim web tabanlı bir eğitim ve kurs platformu. Bu projeyle full-stack geliştirme dinamiklerini ve modern web teknolojilerini pekiştirme fırsatı buldum."
-                    data-desc-en="A web-based education and course platform I developed end-to-end using Spring Boot and React. This project deepened my understanding of full-stack development dynamics and modern web technologies.">
-                    <h3>Kurs Platformu</h3>
+                    data-desc-en="A web-based education and course platform I developed end-to-end using Spring Boot and React. This project deepened my understanding of full-stack development dynamics and modern web technologies."
+                    data-github="https://github.com/ttolga-a/Aerondight_Kurs_Platform">
+                    <h3 class="card-title">Aerondight Kurs Platformu</h3>
                     <div class="tech">SPRING BOOT, REACT</div>
                     <div class="project-date">Ocak 2026</div>
                     <div class="project-arrow">→</div>
                 </div>
 
-                <div class="project-card" data-title="DNS over HTTPS (DoH) Ağ Trafiği ve Gizlilik Analizi"
+                <div class="project-card" data-title="DNS over HTTPS (DoH) Ağ Trafiği ve Gizlilik Analizi" data-title-tr="DNS over HTTPS (DoH) Ağ Trafiği ve Gizlilik Analizi" data-title-en="DNS over HTTPS (DoH) Network Traffic and Privacy Analysis"
                     data-tech="Wireshark, TCP/IP, UDP, DNS, TLS/HTTPS, Windows 11" data-date-tr="Aralık 2025"
                     data-date-en="December 2025"
                     data-desc-tr="Standart DNS trafiğinin (UDP 53) barındırdığı gizlilik zafiyetlerini ve DoH mimarisinin güvenliğini Wireshark ile uygulamalı olarak kanıtlayan analiz projesi. Şifresiz DNS istekleri ile TCP 443 portu üzerinden akan şifreli DoH trafiği karşılaştırılmış; işletim sistemi ve tarayıcı seviyesinde konfigürasyonlar test edilerek olası DNS sızıntıları (leak) tespit edilip raporlanmıştır."
                     data-desc-en="An analysis project that proves the privacy vulnerabilities of standard DNS (UDP 53) and the security of DoH architecture using Wireshark. Unencrypted DNS requests were compared with encrypted DoH traffic on TCP 443; OS and browser-level configurations were tested to detect and report potential DNS leaks.">
-                    <h3>DNS over HTTPS (DoH) Ağ Trafiği ve Gizlilik Analizi</h3>
+                    <h3 class="card-title">DNS over HTTPS (DoH) Ağ Trafiği ve Gizlilik Analizi</h3>
                     <div class="tech">Wireshark, TCP/IP, UDP, DNS, TLS/HTTPS, Windows 11</div>
                     <div class="project-date">Aralık 2025</div>
                     <div class="project-arrow">→</div>
@@ -283,6 +351,35 @@
                 </div>
             </div>
         </section>
+
+        <!-- Experiment W Zengin İçerik (Gizli Şablon) -->
+        <div id="experimentW-rich-content" style="display:none;">
+            <h3 class="rich-section-title">Oyunun Teması ve Genel Bakış</h3>
+            <p class="rich-paragraph">Karanlık ve tekinsiz bir uzay gemisinde geçen Experiment W, gerilim dozunun yüksek olduğu bir birinci şahıs nişancı (FPS) oyunudur. Oyuncular, gemide esir tutulan mahkumları kurtarmak ve onlara acımasız deneysel işkenceler uygulayan zalim lideri alt etmek için zorlu bir mücadeleye girerler. Oyunun görsel dünyası, takım arkadaşlarım tarafından sıfırdan modellenen özgün karakterler ve çevresel varlıklar (asset) ile inşa edildi. Ayrıca oyun evrenindeki deneylerde kullanılan özel bir top için zıplama ve sekme gibi fizik materyalleri (physics materials) kurgulanarak çevre etkileşimi artırıldı.</p>
+
+            <h3 class="rich-section-title">Projeye Katkılarım ve Üstlendiğim Görevler</h3>
+            <p class="rich-paragraph">Bu projenin geliştirme sürecinde yapay zeka programlama, arayüz (UI) tasarımı, ses entegrasyonu ve anlatım tarafında sorumluluklar üstlendim. Geliştirdiğim ve projeye entegre ettiğim başlıca sistemler şunlardır:</p>
+
+            <div class="rich-entry">
+                <span class="rich-entry-title">Düşman ve Boss Kodlaması:</span>
+                <span class="rich-entry-text">Oyundaki normal düşmanların ve final boss'unun tüm temel davranışlarını ve savaş mekaniklerini programladım.</span>
+            </div>
+
+            <div class="rich-entry">
+                <span class="rich-entry-title">Dinamik UI ve Glitch Efektleri:</span>
+                <span class="rich-entry-text">Ana menü ve oyun içi arayüzleri baştan sona kodladım. Atmosferi desteklemek amacıyla, imleç ile üzerine gelindiğinde bozulan (glitch) özel yazı efektleri geliştirdim.</span>
+            </div>
+
+            <div class="rich-entry">
+                <span class="rich-entry-title">Ses ve Müzik Entegrasyonu:</span>
+                <span class="rich-entry-text">Uzay gemisinin o klostrofobik ve karanlık hissini oyuncuya geçirebilmek için tüm müziklerin ve ses efektlerinin (SFX) oyuna entegrasyonunu sağladım.</span>
+            </div>
+
+            <div class="rich-entry">
+                <span class="rich-entry-title">Hikaye ve Diyalog Yazımı:</span>
+                <span class="rich-entry-text">Boss savaşındaki vurucu replikler başta olmak üzere, oyun içindeki tüm diyalogları ve metinleri kaleme alarak hikaye bütünlüğünü sağladım.</span>
+            </div>
+        </div>
 
         <!-- İletişim -->
         <section class="panel" id="contact">
@@ -358,9 +455,18 @@
             document.querySelectorAll('.project-card').forEach(card => {
                 const dateEl = card.querySelector('.project-date');
                 if (dateEl) dateEl.textContent = lang === 'tr' ? card.dataset.dateTr : card.dataset.dateEn;
+                // Kartın kendi başlığını güncelle (data-title-tr/en varsa)
+                if (card.dataset.titleTr && card.dataset.titleEn) {
+                    const h3 = card.querySelector('h3.card-title');
+                    if (h3) h3.textContent = lang === 'tr' ? card.dataset.titleTr : card.dataset.titleEn;
+                }
             });
             if (currentCard) {
                 detailDate.textContent = lang === 'tr' ? currentCard.dataset.dateTr : currentCard.dataset.dateEn;
+                // Detay başlığını güncelle
+                if (currentCard.dataset.titleTr && currentCard.dataset.titleEn) {
+                    detailTitle.textContent = lang === 'tr' ? currentCard.dataset.titleTr : currentCard.dataset.titleEn;
+                }
                 detailDesc.textContent = lang === 'tr' ? currentCard.dataset.descTr : currentCard.dataset.descEn;
             }
         }
@@ -394,14 +500,46 @@
                 const active = document.querySelector('.panel.active');
                 if (active) previousPanel = active.id;
                 currentCard = card;
-                detailTitle.textContent = card.querySelector('h3').textContent;
+                // Başlığı dile göre göster (data-title-tr/en varsa)
+                detailTitle.textContent = (card.dataset.titleTr && card.dataset.titleEn)
+                    ? (currentLang === 'tr' ? card.dataset.titleTr : card.dataset.titleEn)
+                    : card.querySelector('h3').textContent;
                 detailTech.textContent = card.dataset.tech;
                 detailDate.textContent = currentLang === 'tr' ? card.dataset.dateTr : card.dataset.dateEn;
-                detailDesc.textContent = currentLang === 'tr' ? card.dataset.descTr : card.dataset.descEn;
 
-                // GitHub ve itch.io bağlantıları (şimdilik '#' yap, daha sonra datasetten gelecek)
-                document.getElementById('detailGithub').href = "#";
-                document.getElementById('detailItchio').href = "#";
+                // Zengin içerik (rich content) desteği
+                const richContentId = card.dataset.richContentId;
+                if (richContentId) {
+                    const richSource = document.getElementById(richContentId);
+                    if (richSource) {
+                        detailDesc.innerHTML = '';
+                        detailDesc.classList.add('rich-detail-desc');
+                        detailDesc.classList.remove('project-detail-desc');
+                        const clone = richSource.cloneNode(true);
+                        clone.style.display = 'block';
+                        detailDesc.appendChild(clone);
+                    }
+                } else {
+                    detailDesc.classList.remove('rich-detail-desc');
+                    detailDesc.classList.add('project-detail-desc');
+                    detailDesc.textContent = currentLang === 'tr' ? card.dataset.descTr : card.dataset.descEn;
+                }
+
+                // GitHub ve itch.io bağlantılarını data attribute'lardan oku
+                const githubBtn = document.getElementById('detailGithub');
+                const itchioBtn = document.getElementById('detailItchio');
+                if (card.dataset.github) {
+                    githubBtn.href = card.dataset.github;
+                    githubBtn.style.display = 'inline-flex';
+                } else {
+                    githubBtn.style.display = 'none';
+                }
+                if (card.dataset.itchio) {
+                    itchioBtn.href = card.dataset.itchio;
+                    itchioBtn.style.display = 'inline-flex';
+                } else {
+                    itchioBtn.style.display = 'none';
+                }
 
                 // Her proje açıldığında "Detaylar" sekmesine dön
                 const detailsTab = document.querySelector('.detail-tab[data-tab="details"]');
@@ -410,6 +548,15 @@
                 switchPanel('project-detail');
             });
         });
+
+        // Dil değişimi sırasında rich content'li açık kartı da güncelle
+        const _origApplyLang = applyLang;
+        applyLang = function(lang) {
+            _origApplyLang(lang);
+            if (currentCard && !currentCard.dataset.richContentId) {
+                detailDesc.textContent = lang === 'tr' ? currentCard.dataset.descTr : currentCard.dataset.descEn;
+            }
+        };
 
         document.getElementById('backToProjects').addEventListener('click', () => {
             currentCard = null;
@@ -446,6 +593,13 @@
             themeToggle.classList.toggle('is-light', currentTheme === 'light');
             document.body.classList.toggle('theme-light', currentTheme === 'light');
         });
+
+        // ── Open Project By Title (Etkinlik butonları için) ───────────
+        function openProjectByTitle(title) {
+            const card = Array.from(document.querySelectorAll('.project-card'))
+                .find(c => c.dataset.title === title);
+            if (card) card.click();
+        }
     </script>
 
 </body>
