@@ -71,6 +71,23 @@
             <h2 class="panel-title" data-i18n="eventsTitle">Etkinlikler</h2>
             <div class="events-timeline">
 
+                <!-- 24-25 Nisan 2026 -->
+                <div class="event-item">
+                    <div class="event-dot"></div>
+                    <div class="event-content">
+                        <div class="event-header">
+                            <span class="event-name" data-name-tr="Uluslararası Ankara Marka Buluşmaları" data-name-en="International Ankara Brand Meetings">Uluslararası Ankara Marka Buluşmaları</span>
+                            <span class="event-date" data-date-tr="24–25 Nisan 2026" data-date-en="April 24–25, 2026">24–25 Nisan 2026</span>
+                        </div>
+                        <div class="event-desc" data-desc-tr="AnkuRunner oyunumuzun tanıtımı için etkinlikte stant kurduk. 2 gün boyunca Görsel İşleme (Computer Vision) teknolojisi kullanarak ziyaretçilerle interaktif bir şekilde oyunu oynadık." data-desc-en="We set up a booth at the event to promote our AnkuRunner game. For 2 days, we let visitors play the game interactively using Computer Vision technology.">AnkuRunner oyunumuzun tanıtımı için etkinlikte stant kurduk. 2 gün boyunca Görsel İşleme (Computer Vision) teknolojisi kullanarak ziyaretçilerle interaktif bir şekilde oyunu oynadık.</div>
+                        <div class="event-game-row">
+                            <button class="event-game-btn" onclick="openProjectByTitle('Ankurunner')">
+                                <span>🎮</span> AnkuRunner
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
                 <!-- 27-29 Mart 2026 -->
                 <div class="event-item">
                     <div class="event-dot"></div>
@@ -298,6 +315,17 @@
         <section class="panel" id="software">
             <h2 class="panel-title" data-i18n="projectsTitle">Projeler</h2>
             <div class="projects-grid">
+
+                <div class="project-card" data-title="AudioMetre" data-title-tr="AudioMetre" data-title-en="AudioMeter"
+                    data-tech="C, Biyomedikal Mühendisliği, Elektrik-Elektronik, Gömülü Sistemler"
+                    data-date-tr="Devam Ediyor" data-date-en="Ongoing"
+                    data-desc-tr="Ankara Üniversitesi Yazılım, Biyomedikal ve Elektrik-Elektronik Mühendisliği bölümleriyle yürütülen disiplinlerarası bir proje. İşitme kaybını ölçmek amacıyla kullanılan Odyometre cihazının yazılım altyapısını geliştiriyoruz. Farklı frekanslarda ses uyaranları üretip kullanıcı tepkilerini analiz ederek kişiye özel odyogram oluşturan sistem; gömülü yazılım, sinyal işleme ve biyomedikal donanım entegrasyonunu bir araya getiriyor."
+                    data-desc-en="An interdisciplinary project carried out with Ankara University's Software, Biomedical, and Electrical-Electronics Engineering departments. We are developing the software infrastructure of an Audiometer device used to measure hearing loss. The system generates audio stimuli at different frequencies, analyzes user responses, and creates personalized audiograms — combining embedded software, signal processing, and biomedical hardware integration.">
+                    <h3 class="card-title">AudioMetre</h3>
+                    <div class="tech">C, Biyomedikal, Elektrik-Elektronik, Gömülü Sistemler</div>
+                    <div class="project-date">Devam Ediyor</div>
+                    <div class="project-arrow">→</div>
+                </div>
 
                 <div class="project-card" data-title="Giyim Asistanı" data-title-tr="Giyim Asistanı" data-title-en="Fashion Assistant" data-tech="PYTHON, AI/ML"
                     data-date-tr="Devam Ediyor" data-date-en="Ongoing"
@@ -621,6 +649,10 @@
             // Etkinlik isimlerini güncelle (çevrilebilir olanlar)
             document.querySelectorAll('.event-name[data-name-tr]').forEach(el => {
                 el.textContent = lang === 'tr' ? el.dataset.nameTr : el.dataset.nameEn;
+            });
+            // Etkinlik açıklamalarını güncelle
+            document.querySelectorAll('.event-desc[data-desc-tr]').forEach(el => {
+                el.textContent = lang === 'tr' ? el.dataset.descTr : el.dataset.descEn;
             });
             // Tüm rich content bloklarının dilini güncelle
             document.querySelectorAll('[id$="-rich-content"] .rich-lang-block').forEach(block => {
